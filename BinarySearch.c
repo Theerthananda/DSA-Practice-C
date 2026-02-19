@@ -32,10 +32,16 @@ int main() {
 
 int BinarySearch(int a[],int n) {
     int low=0,high=n-1,mid,data;
+    int assending;
 
      printf("Enter the element to search:");
      scanf("%d",&data);
-
+if(a[0]<a[n-1]) {
+	assending=1;
+}
+else{
+	assending=0;
+}
     while(low<=high){
         mid=(low+high)/2;
 
@@ -44,13 +50,22 @@ int BinarySearch(int a[],int n) {
             return 0;
         }
 
-        else if(data<mid){
-            high=mid-1;
-        }
-
-        else{
-            low=mid+1;
-        }
+        if(assending) {
+        	if(data<a[mid]) {
+        		high=mid-1;
+			}
+			else{
+				low=mid+1;
+			}
+		}
+		else {
+			if(data>a[mid]){
+				high=mid-1;
+			}
+			else{
+				low=mid+1;
+			}
+		}
 
     }
 
