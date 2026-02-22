@@ -3,7 +3,7 @@
  */
 #include<stdio.h>
 int main(){
-	int a[50],n,key,result;
+	int a[50],n,key,result=-1;
 	
 	printf("Enter size of an array :");
 	scanf("%d",&n);
