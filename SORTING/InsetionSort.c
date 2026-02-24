@@ -29,13 +29,13 @@ int main(){
 			 	printf("%d \n",a[i]);
 			 }
 			 break;
-		/*case 2:
+		case 2:
 			InsertionSortDessending(a,n);
 			printf("\nArray elements in dessending order :\n");
 			for(int i=0;i<n;i++){
 				printf("%d \n",a[i]);
 			}
-			break;*/
+			break;
 		case 3:
 			exit(0);
 			break;
