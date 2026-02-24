@@ -63,7 +63,7 @@ void InsetionSortAssending(int a[],int n){
 	}
 }
 
-/*void InsertionSortDessending(int a[],int n){
+void InsertionSortDessending(int a[],int n){
 	int temp,j;
 	for(int i=1;i<n;i++){
 		temp=a[i];
@@ -76,4 +76,4 @@ void InsetionSortAssending(int a[],int n){
 		
 		a[j+1]=temp;
 	}
-}*/
+}
