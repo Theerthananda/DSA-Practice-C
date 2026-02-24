@@ -54,10 +54,10 @@ void BubbleSortAseending(int a[],int n){
 			int flag=0;
 		   for(int j=0;j<n-1-i;j++){
 			 
-			 if(a[j]>a[j+1]){
-				int temp=a[j];
+			 if(a[j]>a[j+1])j];
 				a[j]=a[j+1];
-				a[j+1]=temp;
+				a[j+1]=tem{
+				int temp=a[p;
 				flag=1;
 			}
 		}
