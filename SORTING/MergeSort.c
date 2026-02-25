@@ -101,7 +101,7 @@ void  MergeSortAssending(int a[],int n,int lb,int ub){
 }
 
 
-/*void MergeD(int a[],int lb,int mid,int ub){
+void MergeD(int a[],int lb,int mid,int ub){
 	int i=lb;
 	int j=mid+1;
 	int k=lb;
@@ -148,5 +148,5 @@ void MorgeSortDessending(int a[],int n,int lb,int ub){
 		MergeD(a,lb,mid,ub);
 	}
 }
-*/
+
 
