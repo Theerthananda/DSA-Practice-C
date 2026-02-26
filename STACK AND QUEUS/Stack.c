@@ -48,7 +48,7 @@
  	int ch;
  	int x;
  	
- 	/*while(1){
+ 	while(1){
  		printf("\nOPTIONS\n1.PUSH\n2.POP\n3.DSIPLAY\n4.EXIT\nEnter Your choice :");
  		scanf("%d",&ch);
  		
@@ -74,7 +74,7 @@
 			default:
 			printf("Enter vallid choice !");	
 		 }
-	 }*/
+	 }
 	 return 0;
  }
  
