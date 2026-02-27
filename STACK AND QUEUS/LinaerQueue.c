@@ -53,10 +53,10 @@ int main(){
 	int ch;
 	int x;
 	
-	/*while(1){
+	while(1){
 		printf("\nMENU\n1.INSERT\n2.DELETE\n3.DISPLAY\n4.EXIT\nENTER YOUR CHOICE (1-4) :");
 		scanf("%d",&ch);
-		*/
+		
 		switch(ch){
 			case 1:
 				printf("\nEnter value to insert :");
@@ -79,6 +79,6 @@ int main(){
 						default:
 						printf("\nEnter vallid choice !\n");		
 		}
-	//}
+	}
 	return 0;
 }
