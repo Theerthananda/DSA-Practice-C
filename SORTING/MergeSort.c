@@ -5,7 +5,7 @@
 #include<stdlib.h>
 
 void MergeSortAssending(int a[],int n,int lb,int ub);
-void MorgeSortDessending(int a[],int n,int lb,int ub);
+//void MorgeSortDessending(int a[],int n,int lb,int ub);
 
 int main() {
 	int a[50],n;
@@ -139,7 +139,7 @@ void MergeD(int a[],int lb,int mid,int ub){
 		}
 }
 
-void MorgeSortDessending(int a[],int n,int lb,int ub){
+/*void MorgeSortDessending(int a[],int n,int lb,int ub){
 	int mid;
 	if(lb<ub){
 		mid=(lb+ub)/2;
@@ -147,6 +147,6 @@ void MorgeSortDessending(int a[],int n,int lb,int ub){
 		MorgeSortDessending(a,n,mid+1,ub);
 		MergeD(a,lb,mid,ub);
 	}
-}
+}*/
 
 
