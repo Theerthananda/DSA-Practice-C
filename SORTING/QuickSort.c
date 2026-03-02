@@ -98,7 +98,7 @@ int PartitionA(int a[],int n,int lb,int ub){
 
 //DESCENDING ORDER
 
-/*void QuickSortD(int a[],int n,int lb,int ub) {
+void QuickSortD(int a[],int n,int lb,int ub) {
 	int loc;
 	if(lb<ub){
 		loc=PartitionD(a,n,lb,ub);
@@ -135,4 +135,4 @@ int PartitionD(int a[],int n,int lb,int ub){
 	a[end]=temp;
 	
 	return end;
-}*/
+}
