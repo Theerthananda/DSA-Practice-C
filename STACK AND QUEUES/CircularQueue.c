@@ -8,17 +8,17 @@ int front = 0;
 int rear = -1;
 int count = 0;
 
-// Check if Full
+
 int isFull() {
     return count == MAX;
 }
 
-// Check if Empty
+
 int isEmpty() {
     return count == 0;
 }
 
-// Insert
+
 void enqueue() {
     int value;
 
@@ -37,7 +37,7 @@ void enqueue() {
     printf("Inserted Successfully\n");
 }
 
-// Delete
+
 void dequeue() {
     if (isEmpty()) {
         printf("Queue is Empty\n");
@@ -50,7 +50,7 @@ void dequeue() {
     count--;
 }
 
-// Display
+
 void display() {
     if (isEmpty()) {
         printf("Queue is Empty\n");
