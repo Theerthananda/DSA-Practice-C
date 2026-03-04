@@ -67,13 +67,24 @@ void Display(){
 }
 
 int main(){
-	Enqueue();
-	Enqueue();
-	Enqueue();
-	Enqueue();
-	Enqueue();
-	Enqueue();
-	Dequeue();
-	Display();
+	int choice;
+
+    while (1) {
+        printf("\n--- Circular Queue Menu ---\n");
+        printf("1. Insert\n");
+        printf("2. Delete\n");
+        printf("3. Display\n");
+        printf("4. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: Enqueue(); break;
+            case 2: Dequeue(); break;
+            case 3: Display(); break;
+            case 4: exit(0);
+            default: printf("Invalid Choice\n");
+        }
+    }
 }
 
