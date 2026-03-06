@@ -2,56 +2,78 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive Portfolio</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="background"></div>
+<canvas id="particles"></canvas>
+<div class="glow-orb orb-1"></div>
+<div class="glow-orb orb-2"></div>
+<div class="glow-orb orb-3"></div>
 
 <div class="frame">
 
 <header>
-<h1>Interactive Developer Portfolio</h1>
-<p>Control with terminal commands</p>
+<h1>Developer Portfolio</h1>
+<p class="subtitle">Interactive Terminal Interface</p>
+<div class="header-line"></div>
 </header>
 
 <div class="layout">
 
 <!-- commands -->
 <div class="commands">
-<h3>Commands</h3>
+<h3><span class="neon-text">Commands</span></h3>
 <ul>
-<li>help</li>
-<li>about</li>
-<li>skills</li>
-<li>projects</li>
-<li>contact</li>
-<li>clear</li>
+<li class="command-item" data-cmd="help"><span class="cmd-icon">▶</span> help</li>
+<li class="command-item" data-cmd="about"><span class="cmd-icon">▶</span> about</li>
+<li class="command-item" data-cmd="skills"><span class="cmd-icon">▶</span> skills</li>
+<li class="command-item" data-cmd="projects"><span class="cmd-icon">▶</span> projects</li>
+<li class="command-item" data-cmd="contact"><span class="cmd-icon">▶</span> contact</li>
+<li class="command-item" data-cmd="clear"><span class="cmd-icon">▶</span> clear</li>
 </ul>
 </div>
 
 <!-- center display -->
 <div class="display" id="display">
 
-<div class="card big">
+<div class="card big welcome-card">
 <h2>Welcome</h2>
-<p>Type <b>help</b> in terminal</p>
+<p class="welcome-text">Type <b class="highlight">help</b> in the terminal to explore available commands</p>
+<p class="welcome-subtext">Navigate through my portfolio using command-line interface</p>
 </div>
 
 </div>
 
 <!-- terminal -->
 <div class="terminal">
-<span>></span>
-<input id="cmd" placeholder="type command">
+<div class="terminal-header">
+<span class="terminal-dot dot-red"></span>
+<span class="terminal-dot dot-yellow"></span>
+<span class="terminal-dot dot-green"></span>
+<span class="terminal-title">Terminal</span>
+</div>
+<div class="terminal-body">
+<div class="command-history" id="history"></div>
+<div class="input-line">
+<span class="prompt"><span class="prompt-user">user</span>@<span class="prompt-host">portfolio</span>:<span class="prompt-path">~</span>$</span>
+<input id="cmd" placeholder="type command..." autocomplete="off" spellcheck="false">
+<span class="cursor-blink">█</span>
+</div>
+</div>
 </div>
 
 </div>
 
 <footer>
-<p>&copy; 2023 Interactive Portfolio. All rights reserved.</p>
+<p>&copy; <span id="year">2024</span> Interactive Portfolio. All rights reserved.</p>
 </footer>
 
 </div>
