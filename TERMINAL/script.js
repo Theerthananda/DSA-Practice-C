@@ -15,7 +15,8 @@ apiUrl:""
 
 const STORAGE_KEYS={
 visitsTotal:"tt_portfolio_visits_total",
-guestbook:"tt_portfolio_guestbook"
+guestbook:"tt_portfolio_guestbook",
+connects:"tt_portfolio_connects"
 };
 
 // Set current year
@@ -68,6 +69,21 @@ if(exists)return false;
 entries.unshift({name:cleaned,ts:Date.now()});
 setGuestbook(entries);
 return true;
+}
+
+function getConnects(){
+try{
+const raw=localStorage.getItem(STORAGE_KEYS.connects);
+if(!raw)return [];
+const parsed=JSON.parse(raw);
+return Array.isArray(parsed)?parsed:[];
+}catch{return [];}
+}
+
+function addConnectSubmission(data){
+const entries=getConnects();
+entries.unshift({...data,ts:Date.now()});
+localStorage.setItem(STORAGE_KEYS.connects,JSON.stringify(entries.slice(0,100)));
 }
 
 function incrementVisitCounter(){
@@ -504,6 +520,9 @@ return;
 if(gbEl.checked){
 addGuestbookEntry(name);
 }
+
+// Store connect submission for admin dashboard
+addConnectSubmission({name,email,purpose,message});
 
 setStatus("Preparing message...","");
 
