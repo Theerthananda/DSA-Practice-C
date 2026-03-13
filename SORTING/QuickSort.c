@@ -115,7 +115,7 @@ int PartitionD(int a[],int n,int lb,int ub){
 	int temp;
 	
 	while(start<end){
-		while(a[start]>=pivot){
+		while(a[start]>=pivot&&start<ub){
 			start++;
 		}
 		
