@@ -16,6 +16,9 @@ int main(){
     printf("%d\n",*r);
     printf("%d\n",**r);
     printf("%d\n",***r);
-
+    ***r=100;
+    printf("%d\n",***r); 
+    ***r=*p+10;
+    printf("%d\n",***r); 
    
 }
