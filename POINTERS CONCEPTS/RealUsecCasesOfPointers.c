@@ -18,14 +18,20 @@ int main(){
 #include<stdio.h>
 void Increament(int *p){
    *p=*p+1;
-   printf("adress of a in function  %d\n",p);
+  //printf("adress of a in function  %d\n",p);
 }
 
 int main(){
     int a=10;
-    Increament(&a);
+    int *p=&a;
+    printf("%d\n",*p);
+    printf("%d\n",*(p+1));
+    printf("%d\n",p);
+    printf("%d\n",*p+1);
+    //Increament(&a);
     
-    printf("Value of a is %d\n",a);
-    printf("adress of a in main function a %d\n",&a);
+    //printf("Value of a is %d\n",a);
+    //printf("adress of a in main function a %d\n",&a);
+
     // output : 11; 
 }
