@@ -16,12 +16,14 @@
 }*/
 
 
-void print(char *c){
-   /* while(*c!='\0'){
+void print(const char *c){
+    // c[0]='a';  not modifyable
+    /*while(*c!='\0'){
         printf("%c",*c);
         *c++;
     }*/
-   int i;
+  
+   int i=0;
    while(c[i]!='\0'){
     printf("%c",c[i]);
     i++;
@@ -29,7 +31,8 @@ void print(char *c){
 }
 
 int main(){
-    char c[]="HELLO";
+   // char *c="HELLO"; not modifyable
+   char c[30]="hello";
     print(c);
 }
 
