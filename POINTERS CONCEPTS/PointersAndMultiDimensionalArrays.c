@@ -17,6 +17,8 @@ int main(){
 
     int (*p)[3]=b;
     printf("%d\n",p);
-    printf("%d",*(*(b+2)+2));
+    printf("%d\n",*(*(b+2)+2));
+    printf("%d",sizeof(b));
+
 
 }
