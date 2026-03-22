@@ -1,45 +1,40 @@
 #include<stdio.h>
 #include<string.h>
-int main(){
-    char text[100];
-    char pattern[50];
 
+int main() {
+    char text[100], pattern[50];
 
-    printf("Enter Text :");
-    gets(text);
+    printf("Enter Text: ");
+    fgets(text, sizeof(text), stdin);
 
-    printf("Enter pattern :");
-    gets(pattern);
+    printf("Enter Pattern: ");
+    fgets(pattern, sizeof(pattern), stdin);
 
-    int n=strlen(text);
-    int m=strlen(pattern);
+    int n = strlen(text);
+    int m = strlen(pattern);
 
-  
-    /* for(int i=0;i<=n-m;i++){
-        j=0;
-        while (j<m && text[i+j]==pattern[j])
-        {
-            j++;
-        }                                                          //METHOD 1
-        
-        if(j==m){
-            printf("Match found from  index %d to index %d",i,i+m-1);
+    // Remove newline from fgets
+    if(text[n-1] == '\n') text[n-1] = '\0';
+    if(pattern[m-1] == '\n') pattern[m-1] = '\0';
+
+    n = strlen(text);
+    m = strlen(pattern);
+
+    for(int i = 0; i <= n - m; i++) {
+        int j;
+
+        for(j = 0; j < m; j++) {
+            if(text[i + j] != pattern[j]) {
+                break;
+            }
+        }
+
+        if(j == m) {
+            printf("Match found from index %d to %d", i, i + m - 1);
             return 0;
         }
-    }*/
-   
-    for(int i=0;i<=n-m;i++){
-        int flag=0;
-        for(int j=0;j<m;j++){                                      //METHOD 2
-            if(text[i+j]==pattern[j]){
-                flag++;
-            }
-        }
-        if(flag==m){
-                printf("matched from %d to %d",i,i+m-1);
-                return 0;
-            }
     }
-printf("Not found ");
-return 0;
+
+    printf("Pattern not found");
+    return 0;
 }
