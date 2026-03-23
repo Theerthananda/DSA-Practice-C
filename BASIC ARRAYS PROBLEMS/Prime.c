@@ -3,7 +3,7 @@ int main(){
     int n,cnt=0;
     char ch;
 
-    //do{
+    do{
         printf("\nEnter a Number :");
         scanf("%d",&n);
 
@@ -20,9 +20,9 @@ int main(){
             printf("\n%d is not prime !",n);
         }
 
-   // printf("\nDo tou want check Another Number (y/n) :");
-    //scanf(" %c",&ch);
-   // }while(ch=='Y'||ch=='y');
+   printf("\nDo tou want check Another Number (y/n) :");
+    scanf(" %c",&ch);
+   }while(ch=='Y'||ch=='y');
 
     printf("\nProgram Terminated Thank You for using this tool");
 
