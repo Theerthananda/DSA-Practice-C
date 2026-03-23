@@ -16,9 +16,18 @@ int main(){
     }
 
     int (*p)[3]=b;
-    printf("%d\n",p);
+    /*printf("%d\n",p);
     printf("%d\n",*(*(b+2)+2));
-    printf("%d",sizeof(b));
+    printf("%d",sizeof(b));*/
+
+    printf("%d \n",*b);
+    printf("%d\n",b[0]);
+    printf("%d\n",&b[0][0]);
+
+
+    printf("%d\n",*(*(b+1))+0);
+
+
 
 
 }
