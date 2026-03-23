@@ -25,7 +25,8 @@ int main(){
     printf("%d\n",&b[0][0]);
 
 
-    printf("%d\n",*(*(b+1))+0);
+    printf("%d\n",*(*(b+0))+0);
+    printf("%d \n",*(b[2]+0));
 
 
 
