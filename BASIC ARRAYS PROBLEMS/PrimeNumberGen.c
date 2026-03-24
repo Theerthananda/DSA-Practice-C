@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 void GenPrime(int a[],int n);
-//void Prime();
+void Prime();
 int main(){
     int n;
     int a[n];
@@ -13,7 +13,7 @@ int main(){
 
         switch(ch){
             case 1:
-            //Prime();
+            Prime();
             break;
 
             case 2:
@@ -60,7 +60,7 @@ void GenPrime(int a[],int n) {
     printf("\n");
 }
 
-/*void Prime(){
+void Prime(){
     int n,cnt=0;
     char ch;
 
@@ -87,5 +87,5 @@ void GenPrime(int a[],int n) {
 
     printf("\nProgram Terminated Thank You for using this tool\n");
 
-}*/
+}
 
