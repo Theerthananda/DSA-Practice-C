@@ -1,3 +1,7 @@
+/*
+ * @author Theerthananda
+ */
+
 #include<stdio.h>
 
 int checkUnique(int a[], int n);
