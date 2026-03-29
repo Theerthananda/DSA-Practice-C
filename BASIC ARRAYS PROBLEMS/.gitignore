@@ -1,3 +1,57 @@
 .vscode/
 *.exe
 *.o
+*.out
+*.a
+*.dll
+
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Rider / JetBrains
+.idea/
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+
+# Publish output
+publish/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Executables & binaries
+*.exe
+*.dll
+*.pdb
+
+# Others
+*.cache
+*.db
