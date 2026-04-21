@@ -1,12 +1,15 @@
+/*
+ * @author Theerthananda
+ */
+
 #include <stdio.h>
 #include <limits.h>
 #include <stdbool.h>
 
 #define MAX 100
 
-int V; // Number of vertices
+int V;
 
-// Function to find vertex with minimum key value
 int minKey(int key[], bool mstSet[]) {
     int min = INT_MAX;
     int min_index = -1;
@@ -20,7 +23,7 @@ int minKey(int key[], bool mstSet[]) {
     return min_index;
 }
 
-// Function to print MST
+
 void printMST(int parent[], int graph[MAX][MAX]) {
     int totalCost = 0;
 
@@ -33,13 +36,13 @@ void printMST(int parent[], int graph[MAX][MAX]) {
     printf("Total Cost of MST = %d\n", totalCost);
 }
 
-// Prim's Algorithm
+
 void primMST(int graph[MAX][MAX]) {
     int parent[MAX];
     int key[MAX];
     bool mstSet[MAX];
 
-    // Initialization
+   
     for (int i = 0; i < V; i++) {
         key[i] = INT_MAX;
         mstSet[i] = false;
@@ -48,7 +51,7 @@ void primMST(int graph[MAX][MAX]) {
 
     key[0] = 0; // Start from vertex 0
 
-    // Build MST
+   
     for (int count = 0; count < V - 1; count++) {
         int u = minKey(key, mstSet);
 
@@ -70,7 +73,7 @@ void primMST(int graph[MAX][MAX]) {
     printMST(parent, graph);
 }
 
-// Main function
+
 int main() {
     int graph[MAX][MAX];
 

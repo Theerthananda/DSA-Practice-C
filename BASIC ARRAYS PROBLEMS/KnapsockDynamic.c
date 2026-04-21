@@ -1,3 +1,7 @@
+/*
+ * @author Theerthananda
+ */
+
 #include <stdio.h>
 
 #define MAX 100

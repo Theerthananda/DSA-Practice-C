@@ -1,3 +1,7 @@
+/*
+ * @author Theerthananda
+ */
+
 #include<stdio.h>
 
 void fractionalKnapsack(int n, int W, int w[], int p[]) {
